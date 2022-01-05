@@ -1,0 +1,355 @@
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+/*** Setting Typography ***/
+
+@font-face {
+  font-family: "Brandon Regular";
+  src: url("fonts/Brandon_regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Brandon Light";
+  src: url("fonts/Brandon_light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Brandon Bold";
+  src: url("fonts/Brandon_bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Brooke";
+  src: url("fonts/Brooke.woff") format("woff");
+  src: url("fonts/Brooke.otf") format("opentype");
+  src: url("fonts/Brooke.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Brooke Italic";
+  src: url("fonts/Brooke Italic.woff") format("woff");
+  src: url("fonts/Brooke Italic.otf") format("opentype");
+  src: url("fonts/Brooke Italic.ttf") format("truetype");
+}
+
+/*** Typography ***/
+
+h1 {
+  color: #946d36;
+  font-family: "Brooke", serif;
+  display: block;
+  letter-spacing: 6px;
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: "Brandon Regular", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  color: #946d36;
+}
+
+h2.brooke {
+  font-family: "Brooke", serif;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  font-size: 66px;
+  letter-spacing: 6px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-family: "Brandon Bold", sans-serif;
+  text-transform: uppercase;
+  color: #946d36;
+  display: block;
+  text-align: center;
+}
+
+h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Brandon Regular", sans-serif;
+  text-align: center;
+  color: #946d36;
+}
+
+h2.tagline {
+  color: #946d36;
+  font-size: 30px;
+  margin: 40px 0px;
+  letter-spacing: 8px;
+}
+
+h6 {
+  font-family: "Brandon Bold";
+  text-transform: uppercase;
+  color: #946d36;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+@media (min-width: 1200px) {
+  .h1,
+  h1 {
+    font-size: 5rem;
+  }
+  h2.brooke {
+    font-size: 5rem;
+  }
+}
+/*** Nav-bar ***/
+
+.navbar {
+  background-color: #1e3227;
+}
+
+.nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Brandon Regular";
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.shadow {
+  background-color: white !important;
+}
+
+.nav-link {
+  color: white;
+}
+
+/**************** Hover animation BEGIN *****/
+/* a.middle {
+  position: relative;
+}
+
+a.middle:before:link {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #d1a76d;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+a.middle:visited:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+a.middle:active:before {
+  visibility: visible;
+  transform: scaleX(1);
+} */
+
+/************** Hover animation END ************************/
+
+.navbar-brand {
+  margin: 0px;
+}
+
+.navbar-brand img {
+  width: auto;
+  margin: 0 50px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: center;
+    display: flex;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link:link {
+    padding-right: 0rem;
+    padding-left: 0rem;
+    margin: 0px 80px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link:visited {
+    color: white;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #d1a76d;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link:active {
+    color: #d1a76d !important;
+    border-bottom: 1px solid #d1a76d;
+  }
+}
+
+/* nav-bar scroll effect */
+
+/*** Buttons ***/
+
+button {
+  border: 1px solid #c59148;
+  color: #c59148;
+  margin: 30px auto 0px;
+  padding: 10px 26px;
+  font-family: "Brandon Regular";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  background-color: transparent;
+  display: block;
+}
+
+/*** Separators and Borders***/
+
+.separator-top {
+  margin-bottom: 20px;
+}
+
+.add-border {
+  border: 2px solid #946d36;
+  padding: 30px 20px;
+}
+
+.separator-horizontal {
+  margin: 50px auto;
+}
+
+/*** MAIN ***/
+.container-main {
+  padding: 100px 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #1e3227;
+}
+
+div .space-around {
+  display: flex;
+  justify-content: stretch;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+.block {
+  display: block;
+}
+
+.half-width {
+  width: 50%;
+}
+
+/*** HEADER ***/
+header {
+  height: 100vh;
+}
+
+.banner {
+  padding: 100px 0;
+  background-image: url("images/K&D-Header-BackgroundImage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*** DETAILS ***/
+
+.details {
+  background-image: url("images/K&D-Header-Details-Background-Image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  padding: 200px 0px;
+  background-color: #16261d;
+}
+
+.details-content {
+  margin-top: 120px;
+}
+
+.details h3 {
+  letter-spacing: 8px;
+  font-size: 30px;
+}
+
+/*** WEDDING PARTY ***/
+
+.wedding-party h4 {
+  margin: 0px;
+  color: #c59148;
+}
+
+.wedding-party h6 {
+  margin-bottom: 30px;
+}
+
+.wedding-party {
+  background-color: #263a2f;
+  height: 100vh;
+}
+
+.wedding-party-content {
+  border: 1px solid #946d36;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.grid-container.grid-half {
+  grid: 30px / auto auto;
+  margin-bottom: 30px;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 30px;
+}
+
+.hidden {
+  display: none;
+}
