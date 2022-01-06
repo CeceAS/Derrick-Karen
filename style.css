@@ -43,6 +43,18 @@
   src: url("fonts/Brooke Italic.ttf") format("truetype");
 }
 
+/* Webfont: BonVivant-Regular */
+@font-face {
+  font-family: "BonVivant";
+  src: url("BonVivant.woff2") format("woff2"); /* Modern Browsers */
+  src: url("BonVivant.woff") format("woff");
+  src: url("BonVivant.ttf") format("truetype");
+  src: url("BonVivant.otf") format("opentype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
 /*** Typography ***/
 
 h1 {
@@ -311,10 +323,16 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 img.logo-header {
   width: 80%;
+  display: none;
+}
+
+.title h1 {
+  font-family: "BonVivant";
 }
 
 .navigation-buttons {
@@ -328,11 +346,27 @@ img.logo-header {
 /* responsiveness */
 
 @media (max-width: 414px) {
-  img.logo-header {
+  .header-content {
+    justify-content: space-around;
+    flex-direction: column;
     width: 100%;
   }
+
+  img.logo-header {
+    width: 100%;
+    /* display: none; */
+  }
+
   .navigation-buttons {
     width: 100%;
+  }
+
+  .navigation-buttons button {
+    margin: 15px auto;
+  }
+
+  .banner {
+    align-items: stretch;
   }
 }
 
