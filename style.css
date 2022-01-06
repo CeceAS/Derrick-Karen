@@ -46,10 +46,10 @@
 /* Webfont: BonVivant-Regular */
 @font-face {
   font-family: "BonVivant";
-  src: url("BonVivant.woff2") format("woff2"); /* Modern Browsers */
-  src: url("BonVivant.woff") format("woff");
-  src: url("BonVivant.ttf") format("truetype");
-  src: url("BonVivant.otf") format("opentype"); /* Safari, Android, iOS */
+  src: url("fonts/BonVivant.woff2") format("woff2"); /* Modern Browsers */
+  src: url("fonts/BonVivant.woff") format("woff");
+  src: url("fonts/BonVivant.ttf") format("truetype");
+  src: url("fonts/BonVivant.otf") format("opentype"); /* Safari, Android, iOS */
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -321,9 +321,10 @@ header {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 img.logo-header {
@@ -331,8 +332,29 @@ img.logo-header {
   display: none;
 }
 
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .title h1 {
   font-family: "BonVivant";
+  letter-spacing: 0;
+  font-size: 180px;
+  margin: -20px;
+}
+
+.title h3 {
+  font-family: "Brandon Light", sans-serif;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: 30px auto;
 }
 
 .navigation-buttons {
@@ -345,7 +367,12 @@ img.logo-header {
 
 /* responsiveness */
 
-@media (max-width: 414px) {
+@media (max-width: 1200px) {
+  .banner {
+    padding: 50px 5%;
+    align-items: stretch;
+  }
+
   .header-content {
     justify-content: space-around;
     flex-direction: column;
@@ -357,16 +384,37 @@ img.logo-header {
     /* display: none; */
   }
 
-  .navigation-buttons {
+  .title {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-family: "BonVivant";
+    letter-spacing: 0;
+    font-size: 80px;
+    margin: 0px;
+  }
+
+  .title h3 {
+    font-family: "Brandon Light", sans-serif;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin: 0px auto;
+  }
+
+  .navigation-buttons {
+    width: 80%;
   }
 
   .navigation-buttons button {
     margin: 15px auto;
-  }
-
-  .banner {
-    align-items: stretch;
   }
 }
 
