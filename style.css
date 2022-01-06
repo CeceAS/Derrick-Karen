@@ -271,6 +271,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80vh;
 }
 
 body {
@@ -316,6 +317,7 @@ header {
   /* background-image: url("images/K&D-Header-BackgroundImage.png"); */
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
 }
 
 .header-content {
@@ -426,7 +428,7 @@ img.logo-header {
   background-position: center;
   background-size: auto;
   padding: 200px 0px;
-  background-color: #16261d;
+  /* background-color: #16261d; */
 }
 
 .details-content {
@@ -442,25 +444,27 @@ img.logo-header {
 
 .wedding-party h4 {
   margin: 15px auto 0px;
-  color: #c59148;
+  color: var(--dark-gold);
 }
 
 .wedding-party h6 {
   margin-bottom: 15px;
   text-align: center;
+  color: var(--dark-green);
 }
 
 .wedding-party {
-  background-color: #263a2f;
-  height: auto;
+  /* background-color: #263a2f; */
+  /* height: auto; */
 }
 
 .wedding-party-content {
-  border: 1px solid #946d36;
+  border: 1px solid var(--dark-gold);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 5%;
+  /* background-color: var(--light-gold); */
 }
 
 .family,
@@ -483,7 +487,7 @@ img.logo-header {
 }
 
 hr.family-sep {
-  border: 1px solid #946d36;
+  border: 1px solid var(--light-gold);
   width: 50%;
   margin: 30px;
 }
@@ -495,4 +499,9 @@ hr.family-sep {
 
 .hidden {
   display: none;
+}
+
+/*** countdown ***/
+.countdown {
+  height: auto;
 }
