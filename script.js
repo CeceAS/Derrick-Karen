@@ -1,17 +1,22 @@
 "use strict";
 
-// Section Variables:
+// UNIT: Section Variables:
 
+// subunit: Header & Navbar
 const headerSection = document.querySelector("header");
-const detailsSection = document.getElementById("details");
 const navBar = document.querySelector(".navbar");
+
+const navButtonsContainer = document.querySelector(".navigation-buttons");
+
+// subunit: Details Section
+const detailsSection = document.getElementById("details");
 
 // Nav button:
 
 const btnDetails = document.querySelector(".details-btn");
 const btnsNav = document.querySelectorAll(".nav-item");
 
-// smooth scrolling:
+// UNIT: smooth scrolling for navbar
 
 // btnDetails.addEventListener("click", function (e) {
 //   detailsSection.scrollIntoView({ behavior: "smooth" });
@@ -34,3 +39,11 @@ btnsNav.forEach(function (btn) {
 });
 
 //
+
+// UNIT: Smooth scrolling for header nav buttons
+
+navButtonsContainer.addEventListener("click", function (e) {
+  e.preventDefault();
+  const clicked = e.target.getAttribute("href");
+  document.querySelector(clicked)?.scrollIntoView({ behavior: "smooth" });
+});

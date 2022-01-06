@@ -1,16 +1,16 @@
 :root {
-  --color-primary: #5ec576;
-  --color-secondary: #ffcb03;
-  --color-tertiary: #ff585f;
-  --color-primary-darker: #4bbb7d;
-  --color-secondary-darker: #ffbb00;
-  --color-tertiary-darker: #fd424b;
-  --color-primary-opacity: #5ec5763a;
-  --color-secondary-opacity: #ffcd0331;
-  --color-tertiary-opacity: #ff58602d;
-  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
-  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --dark-green: #16261d;
+  --light-green: #263a2f;
+  --dark-gold: #946d36;
+  --light-gold: #c59148;
 }
+
+/* COLORS: 
+
+
+
+
+*/
 
 /*** Setting Typography ***/
 
@@ -116,7 +116,7 @@ h6 {
 }
 /*** Nav-bar ***/
 
-.navbar {
+/* .navbar {
   background-color: #1e3227;
 }
 
@@ -134,7 +134,7 @@ h6 {
 
 .nav-link {
   color: white;
-}
+} */
 
 /**************** Hover animation BEGIN *****/
 /* a.middle {
@@ -218,9 +218,9 @@ a.middle:active:before {
 /*** Buttons ***/
 
 button {
-  border: 1px solid #c59148;
-  color: #c59148;
-  margin: 30px auto 0px;
+  border: 1px solid var(--light-gold);
+  color: var(--light-gold);
+  margin: 30px auto;
   padding: 10px 26px;
   font-family: "Brandon Regular";
   text-transform: uppercase;
@@ -228,6 +228,13 @@ button {
   font-size: 13px;
   background-color: transparent;
   display: block;
+}
+
+button:hover {
+  background-color: var(--light-green);
+  color: white;
+  border: 1px solid var(--light-green);
+  transition-duration: 500ms;
 }
 
 /*** Separators and Borders***/
@@ -257,7 +264,8 @@ button {
 body {
   width: 100%;
   margin: 0 auto;
-  background-color: #1e3227;
+  /* background-color: #1e3227; */
+  background-color: white;
 }
 
 div .space-around {
@@ -278,14 +286,22 @@ img {
   width: 50%;
 }
 
+div.three-quarters-width {
+  width: 75%;
+}
+
+hr {
+  opacity: 1;
+}
+
 /*** HEADER ***/
 header {
   height: 100vh;
 }
 
 .banner {
-  padding: 100px 0;
-  background-image: url("images/K&D-Header-BackgroundImage.png");
+  padding: 100px 5%;
+  /* background-image: url("images/K&D-Header-BackgroundImage.png"); */
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -294,6 +310,30 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+img.logo-header {
+  width: 80%;
+}
+
+.navigation-buttons {
+  width: 50%;
+}
+
+.navigation-buttons button {
+  width: 100%;
+}
+
+/* responsiveness */
+
+@media (max-width: 414px) {
+  img.logo-header {
+    width: 100%;
+  }
+  .navigation-buttons {
+    width: 100%;
+  }
 }
 
 /*** DETAILS ***/
@@ -319,35 +359,56 @@ header {
 /*** WEDDING PARTY ***/
 
 .wedding-party h4 {
-  margin: 0px;
+  margin: 15px auto 0px;
   color: #c59148;
 }
 
 .wedding-party h6 {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .wedding-party {
   background-color: #263a2f;
-  height: 100vh;
+  height: auto;
 }
 
 .wedding-party-content {
   border: 1px solid #946d36;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5%;
 }
 
-.grid-container {
-  display: grid;
+.family,
+.friends {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.grid-container.grid-half {
-  grid: 30px / auto auto;
-  margin-bottom: 30px;
+#parents-bride {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.grid-container > div {
-  text-align: center;
-  font-size: 30px;
+#parents-groom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr.family-sep {
+  border: 1px solid #946d36;
+  width: 50%;
+  margin: 30px;
+}
+
+.friends {
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .hidden {

@@ -64,13 +64,20 @@
     <div class="body"></div>
     <header class="banner container-main">
       <div class="header-content">
-        <div class="center-image">
+        <div class="">
           <img
             src="images/K&D-Header-Logo-Cursive.png"
             alt=""
             class="logo-header"
           />
-          <h2 class="tagline">tie the knot</h2>
+          <!-- <h2 class="tagline">Tie The Knot</h2> -->
+          </div>
+          <div class="navigation-buttons">
+          <button href='#details'>Details</button>
+          <button href="#wedding-party">Wedding Party</button>
+          <button href="#countdown">Countdown</button>
+          <button href="#location">Location & Map</button>
+          <button href="#registry">Registry</button>
         </div>
       </div>
     </header>
@@ -85,17 +92,17 @@
     </div>
 
     <!-- Wedding Party Container -->
-    <div id="weddingparty" class="wedding-party container-main">
+    <div id="wedding-party" class="wedding-party container-main">
      
-        <div class="grid-container">
-      <div class="grid-one">
+        <div class="three-quarters-width">
+      <div class="">
         <img src="images/K&D-Separator.png" class="separator-top" alt="" />
         
           <h2 class="brooke">Wedding Party</h2>
         </div>
-        <div class="flex-container">
+        <div class="wedding-party-content">
           <div class="family">
-            <div class="grid-container grid-half">
+            <div id="parents-bride" class="">
               <div>
                 <h4>Adel Licerio</h4>
                 <h6>Father of the Bride</h6>
@@ -105,17 +112,17 @@
                 <h6>Mother of the Bride</h6>
               </div>
             </div>
-            <div class="grid-container grid-one">
+            <div id="parents-groom" class="">
               <div>
                 <h4>Del Litovich</h4>
 
                 <h6>Father of the Groom</h6>
-                <img src="images/K&D-Separator-Horizontal-2x.png" alt="" class="separator-horizontal">
               </div>
               </div>
             </div>
-            <div class="separator"></div>
-            <div class="grid-container grid-half">
+                
+                <hr class="family-sep" >
+            <div class="friends">
               <div class="bridesmaids">
                 <h4>Adel Licerio</h4>
                 <h6>Father of the Bride</h6>
@@ -148,12 +155,15 @@
     </div>
 
     <!-- Countdown -->
-    <div class="countdown container-main">
+    <div id="countdown" class="countdown container-main">
       <h2 class="brooke">We get married in...</h2>
     </div>
 
     <!-- Location -->
-    <div class="location container-main"></div>
+    <div id="location" class="location container-main"></div>
+
+    <!-- Registry -->
+    <div id="registry"></div>
 
 <!-- JS Links -->
     <script src="script.js"></script>
