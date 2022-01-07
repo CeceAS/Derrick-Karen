@@ -170,6 +170,49 @@ p {
   left: 340px;
 }
 
+@media (max-width: 992px) {
+  .title-effect h2 {
+    font-family: "Brooke", serif;
+    font-size: 50px;
+    letter-spacing: 4px;
+    text-align: left;
+    color: var(--light-gold);
+  }
+
+  .title-effect h3 {
+    font-size: 11px;
+    font-family: "Brandon Light", sans-serif;
+    text-align: left;
+    letter-spacing: 3px;
+    position: relative;
+    left: 20%;
+    color: var(--light-gold);
+  }
+
+  .title-effect h3:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    height: 1px;
+    width: 100%;
+    margin-left: 10px;
+    background: var(--dark-gold);
+  }
+
+  .title-effect h2 span {
+    display: block;
+    position: relative;
+    line-height: 1;
+  }
+
+  .title-left {
+    left: 10%;
+  }
+
+  .title-right {
+    left: 25%;
+  }
+}
 @media (min-width: 1200px) {
   .h1,
   h1 {
@@ -295,26 +338,28 @@ button {
   display: block;
 }
 
+button:visited {
+  border: 1px solid var(--light-gold);
+  color: var(--light-gold);
+}
+
 button:hover {
-  background-color: var(--light-green);
-  color: white;
-  border: 1px solid var(--light-green);
+  background-color: var(--light-gold);
+  color: var(--light-green);
+  border: 1px solid var(--light-gold);
   transition-duration: 500ms;
 }
 
-/*** Separators and Borders***/
-
-.separator-top {
-  margin-bottom: 20px;
+button:active {
+  background-color: var(--light-gold);
+  color: var(--light-green);
+  border: 1px solid var(--light-gold);
 }
 
-.add-border {
-  border: 2px solid #946d36;
-  padding: 30px 20px;
-}
-
-.separator-horizontal {
-  margin: 50px auto;
+@media (max-width: 992px) {
+  button {
+    font-size: 11px;
+  }
 }
 
 /*** MAIN ***/
@@ -587,4 +632,11 @@ hr.family-sep {
   margin: 0;
   text-align: center;
   font-family: "Brandon Light", sans-serif;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    font-size: 11px;
+    padding: 10px 5%;
+  }
 }
