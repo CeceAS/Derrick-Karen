@@ -3,6 +3,8 @@
   --light-green: #263a2f;
   --dark-gold: #946d36;
   --light-gold: #c59148;
+  /* --background-color: floralwhite; */
+  --background-color: #263a2f;
 }
 
 /* COLORS: 
@@ -58,7 +60,7 @@ options: mustard yellow #e1ad01;
 /*** Typography ***/
 
 h1 {
-  color: #946d36;
+  color: var(--dark-gold);
   font-family: "Brooke", serif;
   display: block;
   letter-spacing: 6px;
@@ -72,7 +74,7 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   display: block;
-  color: #946d36;
+  color: var(--dark-gold);
 }
 
 h2.brooke {
@@ -88,7 +90,7 @@ h2.brooke {
 h3 {
   font-family: "Brandon Bold", sans-serif;
   text-transform: uppercase;
-  color: #946d36;
+  color: var(--dark-gold);
   display: block;
   text-align: center;
 }
@@ -99,11 +101,11 @@ h4 {
   letter-spacing: 3px;
   font-family: "Brandon Regular", sans-serif;
   text-align: center;
-  color: #946d36;
+  color: var(--dark-gold);
 }
 
 h2.tagline {
-  color: #946d36;
+  color: var(--dark-gold);
   font-size: 30px;
   margin: 40px 0px;
   letter-spacing: 8px;
@@ -112,7 +114,7 @@ h2.tagline {
 h6 {
   font-family: "Brandon Bold";
   text-transform: uppercase;
-  color: #946d36;
+  color: var(--dark-gold);
   letter-spacing: 2px;
   font-size: 11px;
 }
@@ -149,7 +151,7 @@ p {
 .title-effect h3:after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 50%;
   height: 1px;
   width: 100%;
   margin-left: 10px;
@@ -170,58 +172,35 @@ p {
   left: 340px;
 }
 
+/* note: mobile & ipad */
 @media (max-width: 992px) {
   .title-effect h2 {
-    font-family: "Brooke", serif;
     font-size: 50px;
     letter-spacing: 4px;
-    text-align: left;
-    color: var(--light-gold);
   }
 
   .title-effect h3 {
     font-size: 11px;
-    font-family: "Brandon Light", sans-serif;
-    text-align: left;
     letter-spacing: 3px;
-    position: relative;
-    left: 20%;
-    color: var(--light-gold);
-  }
-
-  .title-effect h3:after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    height: 1px;
-    width: 100%;
-    margin-left: 10px;
-    background: var(--dark-gold);
-  }
-
-  .title-effect h2 span {
-    display: block;
-    position: relative;
-    line-height: 1;
+    left: 15%;
   }
 
   .title-left {
-    left: 10%;
+    left: 5%;
   }
 
   .title-right {
-    left: 25%;
+    left: 20%;
   }
 }
-@media (min-width: 1200px) {
-  .h1,
-  h1 {
-    font-size: 5rem;
-  }
-  h2.brooke {
-    font-size: 5rem;
+
+/* note: smaller mobile */
+@media (max-width: 413px) {
+  .title-effect h2 {
+    font-size: 40px;
   }
 }
+
 /*** Nav-bar ***/
 
 /* .navbar {
@@ -345,7 +324,7 @@ button:visited {
 
 button:hover {
   background-color: var(--light-gold);
-  color: var(--light-green);
+  color: var(--background-color);
   border: 1px solid var(--light-gold);
   transition-duration: 500ms;
 }
@@ -377,7 +356,7 @@ body {
   width: 100%;
   margin: 0 auto;
   /* background-color: #1e3227; */
-  background-color: var(--light-green);
+  background-color: var(--background-color);
 }
 
 div .space-around {
