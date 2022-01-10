@@ -3,7 +3,7 @@
   --light-green: #263a2f;
   --dark-gold: #946d36;
   --light-gold: #c59148;
-  /* --background-color: floralwhite; */
+  /* --background-color: white; */
   --background-color: #263a2f;
 }
 
@@ -375,8 +375,8 @@ div .space-around {
 }
 
 img {
-  margin: auto;
-  display: block;
+  /* margin: 0px;
+  display: block; */
 }
 
 .block {
@@ -603,7 +603,7 @@ header h6 {
 /*** QUIZ CONTAINER ***/
 
 .quiz-title {
-  width: auto;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -685,6 +685,11 @@ header h6 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   padding: 30px;
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (max-width: 603px) {
