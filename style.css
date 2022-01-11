@@ -57,7 +57,73 @@ options: mustard yellow #e1ad01;
   text-rendering: optimizeLegibility;
 }
 
-/*** Typography ***/
+/*** General ***/
+
+.container-main {
+  padding: 100px 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  /* background-color: #1e3227; */
+  background-color: var(--background-color);
+}
+
+section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+/*** Buttons ***/
+
+button {
+  border: 1px solid var(--light-gold);
+  color: var(--light-gold);
+  margin: 15px auto;
+  padding: 10px 26px;
+  font-family: "Brandon Regular";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  background-color: transparent;
+  display: block;
+}
+
+button:visited {
+  border: 1px solid var(--light-gold);
+  color: var(--light-gold);
+}
+
+button:hover {
+  background-color: var(--light-gold);
+  color: var(--background-color);
+  border: 1px solid var(--light-gold);
+  transition-duration: 500ms;
+}
+
+button:active {
+  background-color: var(--light-gold);
+  color: var(--light-green);
+  border: 1px solid var(--light-gold);
+}
+
+@media (max-width: 992px) {
+  button {
+    font-size: 11px;
+  }
+}
+
+/*** Main Typography ***/
 
 h1 {
   color: var(--dark-gold);
@@ -125,6 +191,8 @@ p {
   text-align: center;
   font-weight: 100;
 }
+
+/*** Section Titles ***/
 
 .title-effect {
   display: block;
@@ -214,61 +282,6 @@ p {
 
 /*** Nav-bar ***/
 
-/* .navbar {
-  background-color: #1e3227;
-}
-
-.nav-link {
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Brandon Regular";
-  font-size: 12px;
-  letter-spacing: 3px;
-}
-
-.shadow {
-  background-color: white !important;
-}
-
-.nav-link {
-  color: white;
-} */
-
-/**************** Hover animation BEGIN *****/
-/* a.middle {
-  position: relative;
-}
-
-a.middle:before:link {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #d1a76d;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
-
-a.middle:visited:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-a.middle:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-a.middle:active:before {
-  visibility: visible;
-  transform: scaleX(1);
-} */
-
-/************** Hover animation END ************************/
-
 .navbar-brand {
   margin: 0px;
 }
@@ -309,90 +322,6 @@ a.middle:active:before {
     color: #d1a76d !important;
     border-bottom: 1px solid #d1a76d;
   }
-}
-
-/* nav-bar scroll effect */
-
-/*** Buttons ***/
-
-button {
-  border: 1px solid var(--light-gold);
-  color: var(--light-gold);
-  margin: 15px auto;
-  padding: 10px 26px;
-  font-family: "Brandon Regular";
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 13px;
-  background-color: transparent;
-  display: block;
-}
-
-button:visited {
-  border: 1px solid var(--light-gold);
-  color: var(--light-gold);
-}
-
-button:hover {
-  background-color: var(--light-gold);
-  color: var(--background-color);
-  border: 1px solid var(--light-gold);
-  transition-duration: 500ms;
-}
-
-button:active {
-  background-color: var(--light-gold);
-  color: var(--light-green);
-  border: 1px solid var(--light-gold);
-}
-
-@media (max-width: 992px) {
-  button {
-    font-size: 11px;
-  }
-}
-
-/*** MAIN ***/
-.container-main {
-  padding: 100px 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-body {
-  width: 100%;
-  margin: 0 auto;
-  /* background-color: #1e3227; */
-  background-color: var(--background-color);
-}
-
-div .space-around {
-  display: flex;
-  justify-content: stretch;
-}
-
-img {
-  /* margin: 0px;
-  display: block; */
-}
-
-.block {
-  display: block;
-}
-
-.half-width {
-  width: 50%;
-}
-
-div.three-quarters-width {
-  width: 75%;
-}
-
-hr {
-  opacity: 1;
 }
 
 /*** HEADER ***/
@@ -565,8 +494,7 @@ header h6 {
 }
 
 @media (max-width: 992px) {
-  .content {
-  }
+  /* .content {} */
 
   .content-text {
     width: 90%;
@@ -576,9 +504,9 @@ header h6 {
     min-width: 15%;
   }
 
-  .content p {
-    /* font-size: 40px; */
-  }
+  /* .content p {
+    font-size: 40px;
+  } */
 }
 
 @media (max-width: 566px) {
